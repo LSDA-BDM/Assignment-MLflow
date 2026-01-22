@@ -1,4 +1,4 @@
-# Assignment MLflow
+# Assignment MLflow (WIP)
 
 ## Project Overview
 Time-series ML project for forecasting wind power production in Orkney using weather data. You will start with Jupyter-based experimentation with MLflow tracking, model registry, and deployment and develop python scripts you can use for deployment.
