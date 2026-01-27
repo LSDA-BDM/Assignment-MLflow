@@ -6,6 +6,13 @@ In this assignment, you will design, implement, and serve a **reproducible machi
 
 ---
 
+## Workflow
+
+1. In the assignment repository you will find a Jupyter Notebook `exploration.ipynb` with some helper code to get you started. Go through the steps in this notebook to get familiar with the datasets, pipelines, and working with MLflow.
+1. Start the development process using the `modelling.py` script. First, make sure that you can run this template script. Then, modify it to run your experiments, solving the tasks below.
+
+---
+
 ## Data description
 
 You will work with three datasets:
@@ -41,13 +48,11 @@ Key fields:
 
 ---
 
+
 ## Task description
 
 You will build a **training and deployment pipeline** that transforms raw data into a forecasting service.
-
-  1. In the assignment repository you will find a Jupyter Notebook `exploration.ipynb` with some helper code to get you started. Go through the steps in this notebook to get familiar with the datasets, pipelines, and working with MLflow.
-  1. Start the development process using the `modelling.py` script. First, make sure that you can run this template script. Then, modify it to run your experiments, solving the tasks below.
-
+  
   - [ ] Data alignment
 
   * Load power generation and weather forecast data
