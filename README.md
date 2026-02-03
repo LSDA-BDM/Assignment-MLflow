@@ -2,49 +2,9 @@
 
 The Orkney archipelago in the UK generates more than its net electricity needs from renewable energy, primarily wind power. However, wind power production is inherently variable and difficult to predict. Accurate forecasting is critical for grid stability, planning, and efficient energy distribution.
 
-In this assignment, you will design, implement, and serve a **reproducible machine learning pipeline** that predicts wind power generation in Orkney using real-world historical power data and weather forecasts. The emphasis is not on achieving the best possible accuracy, but on demonstrating sound **data engineering, modeling, reproducibility, and deployment practices** across the full machine learning lifecycle.
+In this assignment, you will design, implement, and serve a **reproducible machine learning pipeline** that predicts wind power generation in Orkney using real-world historical power data and weather forecasts. The emphasis is not on achieving the best possible accuracy, but on demonstrating good practices in **data engineering, modeling, reproducibility, and deployment** across the full machine learning lifecycle.
 
----
-
-## Workflow
-
-1. In the assignment repository you will find a Jupyter Notebook `exploration.ipynb` with some helper code to get you started. Go through the steps in this notebook to get familiar with the datasets, pipelines, and working with MLflow.
-1. Start the development process using the `modelling.py` script. First, make sure that you can run this template script. Then, modify it to run your experiments, solving the tasks below.
-
----
-
-## Data description
-
-You will work with three datasets:
-
-### Power generation data (`power.csv`)
-
-* **Source:** Scottish and Southern Electricity Networks (SSEN)
-* **Granularity:** 1-minute sampling
-* **Target variable:** Total renewable power generation (MW)
-
-Key fields:
-
-* `time`: Timestamp of measurement
-* `Total`: Renewable power generation (MW)
-
-### Weather forecast data (`weather.csv`)
-
-* **Source:** UK Met Office
-* **Granularity:** 3-hour intervals
-* Forecasts include a *source time* (forecast creation) and a *target time* (forecasted timestamp)
-
-Key fields:
-
-* `time`: Target time of the forecast
-* `Speed`: Wind speed (m/s)
-* `Direction`: Wind direction (categorical string, e.g. "NW")
-* `Source_time`: Forecast generation time
-* `Lead_hours`: Forecast horizon
-
-### Future forecasts (`future.csv`)
-
-* Weather forecasts to be used for generating future power predictions using your model
+In the assignment repository you will find a Jupyter Notebook `exploration.ipynb` with detailed instructions and helper code to get you started. Go through the steps in this notebook to get familiar with the datasets, pipelines, and working with MLflow. Your final project should solve the tasks below.
 
 ---
 
@@ -77,11 +37,11 @@ You will build a **training and deployment pipeline** that transforms raw data i
   
   * Log parameters, metrics, and artifacts using MLflow Tracking
   * Organize experiments and runs clearly
-  * Use MLflow to compare model variants and select a best model that you will register and serve
+  * Use MLflow to compare model variants and select a best model
   
   - [ ] Model serving
   
-  * Save the selected model using the MLflow Model format
+  * Register the selected model using the MLflow Model format
   * Serve the model
   * Expose a prediction endpoint that accepts weather inputs and returns power forecasts
     
@@ -111,7 +71,7 @@ Include your results with screen captures from the MLflow UI.
 
 **Maximum length:** 5 pages (excluding figures)
 
-**File name:** `<itu_username>-A2-report.pdf`
+**File name:** `<itu_username>-A1-report.pdf`
 
 **Submission:** on LearnIt
 
