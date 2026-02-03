@@ -4,6 +4,8 @@ The Orkney archipelago in the UK generates more than its net electricity needs f
 
 In this assignment, you will design, implement, and serve a **reproducible machine learning pipeline** that predicts wind power generation in Orkney using real-world historical power data and weather forecasts. The emphasis is not on achieving the best possible accuracy, but on demonstrating good practices in **data engineering, modeling, reproducibility, and deployment** across the full machine learning lifecycle.
 
+To get started with this project, click `<> Code` and then start a codespace on main.
+
 In the assignment repository you will find a Jupyter Notebook `exploration.ipynb` with detailed instructions and helper code to get you started. Go through the steps in this notebook to get familiar with the datasets, pipelines, and working with MLflow. Your final project should solve the tasks below.
 
 ---
