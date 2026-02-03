@@ -111,7 +111,7 @@ Include your results with screen captures from the MLflow UI.
 
 **Maximum length:** 5 pages (excluding figures)
 
-**File name:** `<itu_username>-A2-report.pdf`
+**File name:** `<itu_username>-A1-report.pdf`
 
 **Submission:** on LearnIt
 
