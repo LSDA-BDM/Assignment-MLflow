@@ -77,13 +77,14 @@ Include your results with screen captures from the MLflow UI.
 
 **Submission:** on LearnIt
 
+**Include the link to the Git repository in the report.**
+
 ### Code repository
 
 * A Git repository containing all code needed to run the pipeline
 * Code must run without errors
 * Code must be packaged as MLProject; it should be possible to run it with `mlflow run`
 * Include instructions for running training and deployment
-* Repository URL must be included in the report
 
 ---
 
