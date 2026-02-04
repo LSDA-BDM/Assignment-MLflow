@@ -50,14 +50,13 @@ You will build a **training and deployment pipeline** that transforms raw data i
   - [ ] Reproducibility with MLflow Projects
   
   * Package your training code as an MLProject
-  * Specify dependencies using a `requirements.txt` or environment file
+  * Specify dependencies using an environment file
   * Ensure the project can be executed from scratch on another machine
   
   - [ ] Reflection
   
+  * Discussion of training data window size (e.g. 90 days)
   * Mention limitations of your approach and potential improvements
-  * Discussion of data window size (e.g. 90 days): trade-offs and impact on accuracy
-
 ---
 
 ## Deliverables
