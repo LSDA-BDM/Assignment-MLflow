@@ -4,6 +4,8 @@ The Orkney archipelago in the UK generates more than its net electricity needs f
 
 In this assignment, you will design, implement, and serve a **reproducible machine learning pipeline** that predicts wind power generation in Orkney using real-world historical power data and weather forecasts. The emphasis is not on achieving the best possible accuracy, but on demonstrating good practices in **data engineering, modeling, reproducibility, and deployment** across the full machine learning lifecycle.
 
+To get started with this project, click `<> Code` and then start a codespace on main.
+
 In the assignment repository you will find a Jupyter Notebook `exploration.ipynb` with detailed instructions and helper code to get you started. Go through the steps in this notebook to get familiar with the datasets, pipelines, and working with MLflow. Your final project should solve the tasks below.
 
 ---
@@ -48,14 +50,13 @@ You will build a **training and deployment pipeline** that transforms raw data i
   - [ ] Reproducibility with MLflow Projects
   
   * Package your training code as an MLProject
-  * Specify dependencies using a `requirements.txt` or environment file
+  * Specify dependencies using an environment file
   * Ensure the project can be executed from scratch on another machine
   
   - [ ] Reflection
   
+  * Discussion of training data window size (e.g. 90 days)
   * Mention limitations of your approach and potential improvements
-  * Discussion of data window size (e.g. 90 days): trade-offs and impact on accuracy
-
 ---
 
 ## Deliverables
@@ -75,13 +76,14 @@ Include your results with screen captures from the MLflow UI.
 
 **Submission:** on LearnIt
 
+**Include the link to the Git repository in the report.**
+
 ### Code repository
 
 * A Git repository containing all code needed to run the pipeline
 * Code must run without errors
 * Code must be packaged as MLProject; it should be possible to run it with `mlflow run`
 * Include instructions for running training and deployment
-* Repository URL must be included in the report
 
 ---
 
