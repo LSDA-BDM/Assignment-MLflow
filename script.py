@@ -106,20 +106,6 @@ with mlflow.start_run(run_name="LinearRegression"):
         model = mlflow.pyfunc.load_model(model_uri=f"models:/{model_name}/{model_version}")
         return model.predict(new_data)
 
-    # --- Simulate "future" data ---
-    def get_future_forecasts():
-        """Load future forecasts from CSV (mimicking Influx future query)."""
-        try:
-            forecasts = read_csv_with_time_index("data/future.csv")
-        except FileNotFoundError:
-            print("No future.csv found, skipping forecast step.")
-            return None
-        # mimic selection of most recent source time
-        if "Source_time" in forecasts.columns:
-            newest_forecasts = forecasts.loc[forecasts["Source_time"] == forecasts["Source_time"].max()].copy()
-            return newest_forecasts
-        return forecasts
-
     X = joined_dfs[["Speed"]]
     y = joined_dfs["Total"]
 
