@@ -1,20 +1,21 @@
 ########################################################################################################################
 # IMPORTS
 # You absolutely need these
-# from influxdb import InfluxDBClient   # REMOVED — no longer needed
 import mlflow
+import os
 
 # You will probably need these
 import pandas as pd
 import numpy as np
 from sklearn.pipeline import Pipeline
+from sklearn.model_selection import train_test_split
+import skops.io as sio
 
 # This are for example purposes. You may discard them if you don't use them.
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import TimeSeriesSplit
-from mlflow.models import infer_signature
 
 ### TODO -> HERE YOU CAN ADD ANY OTHER LIBRARIES YOU MAY NEED ###
 
@@ -77,6 +78,8 @@ mlflow.sklearn.autolog()
 
 mlflow.set_tracking_uri("http://127.0.0.1:5000") # We set the MLFlow UI to display in our local host.
 
+mlflow.set_experiment("template-model")
+
 # Start a run
 with mlflow.start_run(run_name="LinearRegression"):
 
@@ -92,6 +95,7 @@ with mlflow.start_run(run_name="LinearRegression"):
     joined_dfs = power_df.join(wind_df, how="inner").dropna(subset=["Total", "Speed"])
 
     # --- Create and save EDA plots ---
+    os.makedirs("plots", exist_ok=True)
     eda_fig = create_eda_plots(joined_dfs)
     eda_fig.savefig("plots/eda_plots.png")
     mlflow.log_artifact("plots/eda_plots.png")
@@ -119,8 +123,7 @@ with mlflow.start_run(run_name="LinearRegression"):
     X = joined_dfs[["Speed"]]
     y = joined_dfs["Total"]
 
-    number_of_splits = 5
-    tscv = TimeSeriesSplit(number_of_splits)
+    X_train, X_test, y_train, y_test = train_test_split(X, y)
 
     pipeline = Pipeline([
         ('scaler', StandardScaler()),
@@ -129,20 +132,18 @@ with mlflow.start_run(run_name="LinearRegression"):
 
     print("Starting training")
 
-    # Train and evaluate model using cross-validation
-    for i, (train, test) in enumerate(tscv.split(X, y)):
-        pipeline.fit(X.iloc[train], y.iloc[train])
-        predictions = pipeline.predict(X.iloc[test])
-        truth = y.iloc[test]
+    # Train and evaluate model
+    pipeline.fit(X_train, y_train)
+    predictions = pipeline.predict(X_test)
 
-        # Plot predictions
-        plt.figure()
-        plt.plot(truth.index, truth.values, label="Truth")
-        plt.plot(truth.index, predictions, label="Predictions")
-        plt.legend()
-        plt.savefig(f"plots/predictions_{i}.png")
-        plt.close()
-        mlflow.log_artifact(f"plots/predictions_{i}.png")
+    # Plot predictions
+    plt.figure(figsize=(15, 4))
+    plt.plot(np.arange(len(predictions)), predictions, label="Predictions")
+    plt.plot(np.arange(len(y_test)), y_test, label="Truth")
+    plt.legend()
+    plt.savefig(f"plots/predictions.png")
+    plt.close()
+    mlflow.log_artifact(f"plots/predictions.png")
 
     # No need to manually log metrics - autologging handles:
     # - Parameters
