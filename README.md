@@ -40,12 +40,14 @@ You will build a **training and deployment pipeline** that transforms raw data i
   * Log parameters, metrics, and artifacts using MLflow Tracking
   * Organize experiments and runs clearly
   * Use MLflow to compare model variants and select a best model
+  * You need [!] to include in a report the results of your experiments from the MLflow interface
   
   - [ ] Model serving
   
   * Register the selected model using the MLflow Model format
   * Serve the model
   * Expose a prediction endpoint that accepts weather inputs and returns power forecasts
+  * You need [!] to include in a report a screen capture showing successful serving of the model
     
   - [ ] Reproducibility with MLflow Projects
   
@@ -63,12 +65,12 @@ You will build a **training and deployment pipeline** that transforms raw data i
 
 ### Report (PDF)
 
-In the report you briefly describe how you solved the tasks above. For each task:
+There are 2 deliverables for this project:
 
-- explain how you solved it and why you chose a particular approach
-- show snippets of your code
+- a report
+- the repository containing the MLFlow project and the .py script
 
-Include your results with screen captures from the MLflow UI.
+In the report you briefly describe how you solved the tasks above. For each task above explain why you chose a particular approach. Include the link to the repository in the report.
 
 **Maximum length:** 5 pages (excluding figures)
 
