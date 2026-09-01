@@ -9,7 +9,7 @@ In this assignment, you will design, implement, and serve a **reproducible machi
 2. Once you have a copy repository, add us as collaborators through **Settings > Collaborators > Add people > Insert the following emails**: **msia@itu.dk, jaga@itu.dk, admchai@itu.dk** *(IMPORTANT: this is so we can check your project later on)*.
 3. Then, click on **<>Code**, select **Codespaces**, and finally **Create codespace on main**.
 
-In the assignment repository you will find a Jupyter Notebook `exploration.ipynb` with detailed instructions and helper code to get you started. Go through the steps in this notebook to get familiar with the datasets, pipelines, and working with MLflow. Your final project should solve the tasks below.
+In the assignment repository you will find a Jupyter Notebook `exploration.ipynb` with detailed instructions and helper code to get you started. Go through the steps in this notebook to get familiar with the datasets, pipelines, and working with MLflow. Your final project should solve the tasks mentioned below in the *Task description*..
 
 ---
 
