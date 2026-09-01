@@ -40,14 +40,14 @@ You will build a **training and deployment pipeline** that transforms raw data i
   * Log parameters, metrics, and artifacts using MLflow Tracking
   * Organize experiments and runs clearly
   * Use MLflow to compare model variants and select a best model
-  * You need [!] to include in a report the results of your experiments from the MLflow interface
+  * You need to include in a report the results of your experiments from the MLflow interface
   
   - [ ] Model serving
   
   * Register the selected model using the MLflow Model format
   * Serve the model
   * Expose a prediction endpoint that accepts weather inputs and returns power forecasts
-  * You need [!] to include in a report a screen capture showing successful serving of the model
+  * You need to include in a report a screen capture showing successful serving of the model
     
   - [ ] Reproducibility with MLflow Projects
   
