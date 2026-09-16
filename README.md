@@ -36,7 +36,7 @@ You will build a **training and deployment pipeline** that transforms raw data i
 
   * Train at least 2 regression models of your choice
   * Use evaluation metrics appropriate for regression
-  * Use the `future.csv` file to generate future predictions (to check that your model works on new data)
+  * Use the `future.csv` file to generate future predictions (to check that your model works on new data) and include the first 10 predictions in the report
 
   - [ ] Experiment tracking with MLflow
   
